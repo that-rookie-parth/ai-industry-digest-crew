@@ -1,0 +1,23 @@
+[project]
+name = "multi_platform_content_repurposing_crew"
+version = "0.1.0"
+description = "multi-platform-content-repurposing-crew using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.201.1,<1.0.0"
+]
+
+[project.scripts]
+multi_platform_content_repurposing_crew = "multi_platform_content_repurposing_crew.main:run"
+run_crew = "multi_platform_content_repurposing_crew.main:run"
+train = "multi_platform_content_repurposing_crew.main:train"
+replay = "multi_platform_content_repurposing_crew.main:replay"
+test = "multi_platform_content_repurposing_crew.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

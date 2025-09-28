@@ -1,17 +1,34 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Find the most recent AI and LLM industry updates from the past 24 hours.
+    Include new model releases, research breakthroughs, hackathons, collaborations,
+    and notable announcements. Provide links where possible.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    A structured list of 10-15 findings with titles, dates, and source links.
   agent: researcher
 
-reporting_task:
+analysis_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Review the research findings and organize them into categories:
+    - Models
+    - Techniques
+    - Events/Hackathons
+    - Collaborations
+    - Other notable news
+    Summarize each item into 2–3 sentences.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    A categorized summary of the findings with each item clearly explained in plain language.
+  agent: analyst
+
+report_task:
+  description: >
+    Using the analysis, write a polished daily digest titled:
+    "Daily AI & LLM Industry Report - {date}".
+    Format the report in markdown with clear sections, bullet points,
+    and include source links for reference.
+  expected_output: >
+    A well-formatted markdown report that is engaging and easy to read.
+    The final report MUST have sections: Models, Techniques, Events/Hackathons,
+    Collaborations, Other News.
+  agent: writer
+  output_file: daily_ai_digest.md

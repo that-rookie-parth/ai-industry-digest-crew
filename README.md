@@ -1,54 +1,9 @@
-# MultiPlatformContentRepurposingCrew Crew
+# Multi-Platform Content Repurposing Crew
 
-Welcome to the MultiPlatformContentRepurposingCrew Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Build a crew that takes a single piece of content (like a blog post or report) and automatically repurposes it across formats and channels. For example, given a product announcement doc, one agent (Content Analyzer) uses an LLM to extract the key points and target audience. Another (Copywriting Agent) crafts social media posts (Twitter threads, LinkedIn updates) and a short email newsletter blurb. A Presentation Builder agent converts highlights into bullet-point slides (e.g. using a Python PPT library). A Graphics Assistant generates image prompts for DALL·E or Stable Diffusion to create accompanying visuals. All outputs are reviewed by an Editor Agent to ensure consistent tone. The agents collaborate through shared memory: the insights from Content Analyzer flow into the Copywriter and Presentation agents, ensuring messaging is aligned.
 
-## Installation
+* Value: Marketing and communications teams spend a lot of time manually adapting content for each platform. This crew automates the process, greatly increasing output without extra effort. It saves creative hours while preserving brand consistency, embodying the multi-agent productivity boost noted by IBM. The result is higher content throughput (e.g. a 3x productivity gain) and faster engagement with audiences across channels.
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+* Tools/APIs: OpenAI GPT-4 (text generation) and DALL·E or Stable Diffusion (image creation); social media APIs (Twitter API, LinkedIn API) or CMS (WordPress API) to directly publish content; Google Slides API or Python pptx for slide decks; Notion or a CMS API to store drafts. Agents use CrewAI tools for web research (e.g. Serper) to stay on-trend.
 
-First, if you haven't already, install uv:
-
-```bash
-pip install uv
-```
-
-Next, navigate to your project directory and install the dependencies:
-
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/multi_platform_content_repurposing_crew/config/agents.yaml` to define your agents
-- Modify `src/multi_platform_content_repurposing_crew/config/tasks.yaml` to define your tasks
-- Modify `src/multi_platform_content_repurposing_crew/crew.py` to add your own logic, tools and specific args
-- Modify `src/multi_platform_content_repurposing_crew/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
-```
-
-This command initializes the multi-platform-content-repurposing-crew Crew, assembling the agents and assigning them tasks as defined in your configuration.
-
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
-
-## Understanding Your Crew
-
-The multi-platform-content-repurposing-crew Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the MultiPlatformContentRepurposingCrew Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+* Deployment: A web-based dashboard or CLI tool where a user inputs the source content. The crew runs and outputs ready-to-publish posts, slide decks, and graphics. It could be hosted on a web server or provided as an API (e.g. a Flask app) that integrates with company social accounts via OAuth.

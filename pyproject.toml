@@ -1,8 +1,8 @@
 [project]
-name = "multi_platform_content_repurposing_crew"
+name = "ai-industry-digest-crew"
 version = "0.1.0"
-description = "multi-platform-content-repurposing-crew using crewAI"
-authors = [{ name = "Your Name", email = "you@example.com" }]
+description = "A CrewAI workflow that researches and summarizes daily AI industry developments."
+authors = [{ name = "Parth Kulshreshtha", email = "kulshreshthaparth@gmail.com" }]
 requires-python = ">=3.10,<3.14"
 dependencies = [
     "crewai[tools]>=0.201.1,<1.0.0",
@@ -10,11 +10,11 @@ dependencies = [
 ]
 
 [project.scripts]
-multi_platform_content_repurposing_crew = "multi_platform_content_repurposing_crew.main:run"
-run_crew = "multi_platform_content_repurposing_crew.main:run"
-train = "multi_platform_content_repurposing_crew.main:train"
-replay = "multi_platform_content_repurposing_crew.main:replay"
-test = "multi_platform_content_repurposing_crew.main:test"
+ai-industry-digest = "ai_industry_digest_crew.main:run"
+run_crew = "ai_industry_digest_crew.main:run"
+train = "ai_industry_digest_crew.main:train"
+replay = "ai_industry_digest_crew.main:replay"
+test = "ai_industry_digest_crew.main:test"
 
 [build-system]
 requires = ["hatchling"]

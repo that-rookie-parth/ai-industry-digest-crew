@@ -7,8 +7,8 @@ from crewai_tools import TavilySearchTool
 
 
 @CrewBase
-class MultiPlatformContentRepurposingCrew:
-    """MultiPlatformContentRepurposingCrew crew"""
+class AIIndustryDigestCrew:
+    """Research, analyze, and report recent AI industry developments."""
 
     agents: List[BaseAgent]
     tasks: List[Task]
@@ -57,7 +57,7 @@ class MultiPlatformContentRepurposingCrew:
 
     @crew
     def crew(self) -> Crew:
-        """Creates the MultiPlatformContentRepurposingCrew crew"""
+        """Create the sequential AI industry digest crew."""
 
         return Crew(
             agents=self.agents,

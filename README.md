@@ -52,7 +52,7 @@ The agent roles and goals live in [`agents.yaml`](src/ai_industry_digest_crew/co
 Prerequisites: [uv](https://docs.astral.sh/uv/) and API keys for Tavily and your CrewAI LLM provider.
 
 ```bash
-git clone https://github.com/that-rookie-parth/ai-industry-digest-crew.git
+git clone https://github.com/parthkulshreshtha/ai-industry-digest-crew.git
 cd ai-industry-digest-crew
 
 uv sync --locked
